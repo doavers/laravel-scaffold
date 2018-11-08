@@ -9,6 +9,14 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Toasted from 'vue-toasted';
+
+Vue.use(Toasted)
+Vue.toasted.register('error', message => message, {
+    position : 'bottom-center',
+    duration : 1000
+});
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -30,6 +38,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+Vue.component('profile', require('./components/profile/Profile.vue'));
 
 const app = new Vue({
     el: '#app'
