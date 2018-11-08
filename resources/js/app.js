@@ -15,7 +15,7 @@ Vue.use(Toasted)
 Vue.toasted.register('error', message => message, {
     position : 'bottom-center',
     duration : 1000
-});
+})
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,7 +25,7 @@ Vue.toasted.register('error', message => message, {
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
@@ -40,6 +40,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  */
 
 Vue.component('profile', require('./components/profile/Profile.vue'));
+Vue.component('profile-password', require('./components/profile/Password.vue'));
 
 const app = new Vue({
     el: '#app'

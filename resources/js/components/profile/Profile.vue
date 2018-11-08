@@ -49,14 +49,14 @@ export default {
   },
   methods: {
     getAuthUser () {
-      axios.get(`/api/profile/getAuthUser`)
+      axios.get('/api/profile/getAuthUser')
       .then(response => {
         this.user = response.data
       })
     },
     updateAuthUser () {
       this.submiting = true
-      axios.put(`/api/profile/updateAuthUser`, this.user)
+      axios.put('/api/profile/updateAuthUser', this.user)
       .then(response => {
         this.errors = {}
         this.submiting = false
