@@ -24,3 +24,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 require __DIR__ . '/profile/profile.php';
+
+// contact routes
+Route::get('/contact', 'MessageController@form')->name('contact.form');
+Route::post('/send', 'MessageController@send')->name('contact.send');

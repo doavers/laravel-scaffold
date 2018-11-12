@@ -17,6 +17,11 @@
 					<i class="nav-icon icon-lock"></i> Roles
 				</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/contact">
+					<i class="nav-icon icon-lock"></i> Contact
+				</a>
+			</li>
 		</ul>
 	</nav>
 	<button class="sidebar-minimizer brand-minimizer" type="button"></button>

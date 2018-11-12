@@ -13,7 +13,7 @@ import Toasted from 'vue-toasted';
 
 Vue.use(Toasted)
 Vue.toasted.register('error', message => message, {
-    position : 'bottom-center',
+    position : 'top-right',
     duration : 1000
 })
 
@@ -41,6 +41,7 @@ Vue.toasted.register('error', message => message, {
 
 Vue.component('profile', require('./components/profile/Profile.vue'));
 Vue.component('profile-password', require('./components/profile/Password.vue'));
+Vue.component('contact-form', require('./components/Contact-form.vue'));
 
 const app = new Vue({
     el: '#app'

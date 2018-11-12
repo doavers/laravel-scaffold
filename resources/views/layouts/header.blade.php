@@ -4,7 +4,7 @@
 	</button>
 	<a class="navbar-brand" href="{{ url('/') }}">
 		<img class="navbar-brand-full" src="img/sprintasia-logo.png" width="auto" height="25" alt="Modulr Logo">
-		<img class="navbar-brand-minimized" src="img/sprintasia-logo.png" width="30" height="30" alt="Modulr Logo">
+		<img class="navbar-brand-minimized" src="img/sprintasia-logo.png" width="auto" height="30" alt="Modulr Logo">
 	</a>
 	<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
 		<span class="navbar-toggler-icon"></span>

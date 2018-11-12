@@ -5,6 +5,9 @@
       </div>
       <div class="card-body">
         <form class="form-horizontal">
+          <div v-if="success" class="alert alert-success">
+            Terima kasih. Pesan berhasil dikirim.
+          </div>
           <div class="form-group row">
             <label class="col-md-3">Full Name</label>
             <div class="col-md-9">
@@ -39,6 +42,7 @@
 export default {
   data () {
     return {
+      success: false,
       user: {},
       errors: {},
       submiting: false
@@ -58,12 +62,17 @@ export default {
       this.submiting = true
       axios.put('/api/profile/updateAuthUser', this.user)
       .then(response => {
+        // tnis.success = true;
         this.errors = {}
         this.submiting = false
         this.$toasted.global.error('Profile updated!');
       })
       .catch(error => {
-        this.errors = error.response.data.errors
+        if (error.response.status == 422) {
+          this.errors = error.response.data.errors;
+          this.$toasted.global.error(error.response.data.message);
+          console.log(this.error);
+        }
         this.submiting = false
       })
     }
